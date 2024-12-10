@@ -25,7 +25,5 @@ for r in range(len(grid)):
     for c in range(len(grid[r])):
         if grid[r][c] == "X":
             x_count += 1
-            if grid[r][c + 1] == "M" or grid[r][c - 1] or grid[r + 1][c] or grid[r - 1][c] or grid[r + 1][c + 1] == "M" or grid[r + 1][c - 1] == "M" or grid[r - 1][c + 1] == "M" or grid[r - 1][c - 1] == "M":
-                
 
 print(x_count)
