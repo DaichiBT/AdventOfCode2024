@@ -21,9 +21,27 @@ for line in file_data:
 count = 0
 x_count = 0
 
+validity = []
+
+letters = ["X", "M", "A", "S"]
+
+letter
+
+vDirection = []
+hDirection = []
+
+# {r + 1, c}, {r + 1, c + 1}, {r
+
+def checkLetter(letter):
+    if grid[r + 1][c + 1] == letter:
+
+    elif grid[r + 1][c - 1] == letter:
+
+    
+
+
 for r in range(len(grid)):
     for c in range(len(grid[r])):
-        if grid[r][c] == "X":
-            x_count += 1
+
 
 print(x_count)
