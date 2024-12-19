@@ -19,8 +19,29 @@ for line in file_data:
     grid.append(row)
 
 count = 0
-string = " ".join(file_data)
-splitup = string.split("|")
+stringOfAll = " ".join(file_data)
+splitup = stringOfAll.split("|")
+
+before = []
 
 
-print(splitup)
+def get_char_before(string, char):
+    index = string.find(char)
+    if index > 0:
+        before.append(string[index - 2] + string[index - 1])
+    else:
+        return None
+
+
+def get_char_after(string, char):
+    index = string.find(char)
+    if index > 0:
+        before.append(string[index + 1] + string[index + 2])
+    else:
+        return None
+
+
+get_char_before(stringOfAll, '|')
+get_char_after(stringOfAll, '|')
+
+print(before)
