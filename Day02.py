@@ -22,18 +22,12 @@ def check(num):
             decreasing = False
     return increasing or decreasing
 
-
-def count_safe_reports(file_data):
-    safe_count = 0
-
-    for report in file_data:
-        if check(report):
-            safe_count += 1
-
-    return safe_count
-
-
 file_data = get_file_data("Day02Input")
+safe_count = 0
 
-safe_reports = count_safe_reports(file_data)
-print(safe_reports)
+for report in file_data:
+    if check(report):
+        safe_count += 1
+
+
+print(safe_count)
